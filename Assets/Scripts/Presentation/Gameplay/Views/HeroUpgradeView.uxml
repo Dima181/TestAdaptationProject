@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/Presentation/Gameplay/Views/HeroUpgradeView.uss?fileID=7433441132597879392&amp;guid=d84954748fa4a2842b5c16b76693c702&amp;type=3#HeroUpgradeView" />
+    <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1;">
+        <ui:VisualElement name="Container" class="container" style="flex-grow: 1;">
+            <ui:Label text="Label" name="Level_text" class="text" />
+            <ui:Label text="Label" name="Strength_text" class="text" />
+            <ui:Button text="Улучшить&#10;" name="Upgrade_button" class="button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

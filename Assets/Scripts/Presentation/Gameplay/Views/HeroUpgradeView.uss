@@ -1,0 +1,33 @@
+.panel {
+    background-color: rgba(100, 100, 100, 0.41);
+}
+
+.container {
+    background-color: rgb(156, 156, 156);
+    top: 25%;
+    left: 15%;
+    bottom: 25%;
+    right: 15%;
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    align-items: stretch;
+}
+
+.button {
+    flex-grow: 0.25;
+    font-size: 50px;
+    background-color: rgb(126, 124, 124);
+}
+
+.text {
+    flex-grow: 1;
+    font-size: 50px;
+    -unity-text-align: middle-center;
+}
