@@ -4,7 +4,6 @@ using Assets.Scripts.Presentation.Gameplay.Views.HeroUpgrade;
 using MessagePipe;
 using R3;
 using UnityEngine;
-using VContainer;
 
 namespace Assets.Scripts.Presentation.Gameplay.Presenters.HeroUpgrade
 {
@@ -14,7 +13,6 @@ namespace Assets.Scripts.Presentation.Gameplay.Presenters.HeroUpgrade
         private readonly IPublisher<UpgradeHeroDTO> _publisher;
         private readonly CompositeDisposable _disposables = new();
 
-        [Inject]
         public HeroUpgradePresenter(HeroModel heroModel, IPublisher<UpgradeHeroDTO> publisher)
         {
             _heroModel = heroModel;
@@ -37,6 +35,7 @@ namespace Assets.Scripts.Presentation.Gameplay.Presenters.HeroUpgrade
         private void OnUpgradeClicked()
         {
             _publisher.Publish(new UpgradeHeroDTO { Strength = 5 });
+            Debug.Log("OnClick");
         }
     }
 }

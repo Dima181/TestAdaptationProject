@@ -3,7 +3,6 @@ using VContainer.Unity;
 using VContainer;
 using Assets.Scripts.Presentation.Gameplay.Views.HeroUpgrade;
 using Assets.Scripts.Presentation.Gameplay.Presenters.HeroUpgrade;
-using Assets.Scripts.Domain.Gameplay.Messages;
 using Assets.Scripts.Application.UseCases;
 using Assets.Scripts.Domain.Gameplay.Models;
 using MessagePipe;
@@ -21,8 +20,7 @@ namespace Assets.Scripts.Installers
             builder.RegisterInstance(_heroUpgradeView);
             builder.Register<HeroModel>(Lifetime.Singleton);
 
-            builder.Register<UpgradeHeroHandler>(Lifetime.Singleton)
-                   .As<IAsyncSubscriber<UpgradeHeroDTO>>();
+            builder.RegisterEntryPoint<UpgradeHeroHandler>();
 
             builder.RegisterEntryPoint<HeroUpgradePresenter>();
         }
