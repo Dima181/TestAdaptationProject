@@ -1,9 +1,9 @@
-﻿using R3;
+﻿using Assets.Scripts.Domain.Gameplay.Models;
 
 namespace Assets.Scripts.Domain.Gameplay.Messages
 {
     public class UpgradeHeroDTO
     {
-        public int Strength { get; set; }
+        public HeroStatsModel Stats { get; set; }
     }
 }
